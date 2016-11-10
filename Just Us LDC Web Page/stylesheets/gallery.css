@@ -22,3 +22,13 @@ body {
 	text-align: center;
 	}
 		
+/* IMAGE HOVER - replace with an onclick enlarge in javascript*/
+.thumbnail:hover{
+	position:relative;
+	top:-25px;
+	left:-35px;
+	width:300px;
+	height:auto;
+	display: block;
+	z-index:999;
+}
