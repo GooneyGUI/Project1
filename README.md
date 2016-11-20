@@ -19,8 +19,8 @@ ______________________________________
 HTML needed to complete the project
 ______________________________________
 
-registrationForms.html page needs:  
-format the form to be more aesthetically pleasing
+DONE >>>>>> registrationForms.html page needs:  
+format the form to be more aesthetically pleasing <<<<<<< DONE
 
 contact.html page needs: same as registrationForm.html page
 
