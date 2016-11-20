@@ -25,3 +25,5 @@ format the form to be more aesthetically pleasing <<<<<<< DONE
 DONE >>>>> contact.html page needs: same as registrationForm.html page <<<<< DONE
 
 DONE>>>> All pages need the meetus.html page removed from the navigation bar. <<<< DONE
+
+Gallery.html page needs a TABLE layout for the pics 
