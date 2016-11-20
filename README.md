@@ -22,6 +22,6 @@ ______________________________________
 DONE >>>>>> registrationForms.html page needs:  
 format the form to be more aesthetically pleasing <<<<<<< DONE
 
-contact.html page needs: same as registrationForm.html page
+DONE >>>>> contact.html page needs: same as registrationForm.html page <<<<< DONE
 
 DONE>>>> All pages need the meetus.html page removed from the navigation bar. <<<< DONE
