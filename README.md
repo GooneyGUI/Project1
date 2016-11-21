@@ -9,7 +9,7 @@ JustUs.html page needs: created date, last date updated, use the DOM/BOM objects
 
 registrationForm.html page needs: validate the email address, name input field validation, control structure - if # registrations = 2 then name input field = 2, validation will force 2 name inputs before exiting. timestamp.
 
-gallery.html page needs: onclick event handler - when photo is clicked an exploded view of the photo displays. 
+DONE >> gallery.html page needs: onclick event handler - when photo is clicked an exploded view of the photo displays. << DONE
 
 videos.html page needs: same as gallery.html
 
@@ -26,4 +26,4 @@ DONE >>>>> contact.html page needs: same as registrationForm.html page <<<<< DON
 
 DONE>>>> All pages need the meetus.html page removed from the navigation bar. <<<< DONE
 
-Gallery.html page needs a TABLE layout for the pics 
+DONE >>>> Gallery.html page needs a TABLE layout for the pics <<<< DONE
