@@ -4,30 +4,39 @@
 <head>
 <title>Photo Gallery</title>
 	<meta charset="UTF-8" />
-	<script src="modernizr-1.5.js"></script>
+	<script type = "text/javascript" src="scripts/modernizr-1.5.js"></script>
+	<script type = "text/javascript" src="scripts/gallery.js"></script>
 	<link href="stylesheets/gallery.css" rel="stylesheet" type="text/css" />
+	
 </head>
 
 <h1 align="center">Photo Gallery</h1>
 <body>
-<!------------------------------------------------------->
-<!-- ADD A SCRIPT WHICH MAKES THE PICS BIGGER ON CLICK -->
-<!------------------------------------------------------->
+<!-- PHOTOS IN TABLE FORMAT -->
 <center>
 <table>
 <tr>
-<td><img src="photos/thumbs/gallery1.jpg" alt="position 1" ></td>
-<td><img src="photos/thumbs/gallery2.jpg" alt="position 2"></td>
-<td><img src="photos/thumbs/gallery3.jpg" alt="position 3"></td>
-<td><img src="photos/thumbs/gallery4.jpg" alt="position 4"></td>
-<td><img src="photos/thumbs/gallery7.jpg" alt="position 5"></td>
+<td><img src = "photos/thumbs/gallery1.jpg" onmouseover = "this.src = 'photos/gallery1.jpg' " onmouseout = "this.src = 'photos/thumbs/gallery1.jpg'" />
+</td>
+<td><img src = "photos/thumbs/gallery2.jpg" onmouseover = "this.src = 'photos/gallery2.jpg' " onmouseout =  "this.src = 'photos/thumbs/gallery2.jpg' "/>
+</td>
+<td><img src = "photos/thumbs/gallery3.jpg"  onmouseover = "this.src = 'photos/gallery3.jpg' " onmouseout =  "this.src = 'photos/thumbs/gallery3.jpg' "/>
+</td>
+<td><img src = "photos/thumbs/gallery4.jpg"  onmouseover = "this.src = 'photos/gallery4.jpg' " onmouseout =  "this.src = 'photos/thumbs/gallery4.jpg' " />
+</td>
+<td><img src = "photos/thumbs/gallery7.jpg"  onmouseover = "this.src = 'photos/gallery7.jpg' " onmouseout = "this.src = 'photos/thumbs/gallery7.jpg' " />
+</td>
 </tr>
 <tr>
-<td><img src="photos/thumbs/gallery6.jpg" alt="position 7"></td>
-<td><img src="photos/thumbs/gallery5.jpg" alt="position 8"></td>
+<td><img src = "photos/thumbs/gallery5.jpg"  onmouseover = "this.src = 'photos/gallery5.jpg' " onmouseout = "this.src = 'photos/thumbs/gallery5.jpg' " />
+</td>
+<td><img src = "photos/thumbs/gallery6.jpg"  onmouseover = "this.src = 'photos/gallery6.jpg'  " onmouseout = "this.src = 'photos/thumbs/gallery6.jpg' " />
+</td>
 <td><img src="photos/thumbs/notes.png" alt="position 9"></td>
-<td><img src="photos/thumbs/gallery9.jpg" alt="position 10"></td>
-<td><img src="photos/thumbs/gallery8.jpg" alt="position 11"></td>
+<td><img src = "photos/thumbs/gallery8.jpg"  onmouseover = "this.src =  'photos/gallery8.jpg' " onmouseout = "this.src = 'photos/thumbs/gallery8.jpg' "/>
+</td> 
+<td><img src = "photos/thumbs/gallery9.jpg"  onmouseover = "this.src =  'photos/gallery9.jpg' " onmouseout = "this.src = 'photos/thumbs/gallery9.jpg' " />
+</td>
 </tr>
 </table>
 </center>
@@ -40,7 +49,6 @@
 <a href="events.html"><img src="buttons/events.png" alt="events"></a>
 <a href="videos.html"><img src="buttons/videos.png" alt="videos"></a>
 <a href="contact.html"><img src="buttons/contactus.png" alt="contact us"></a>
-
 </div>
 <!-- end navigation bar -->
 
