@@ -51,3 +51,9 @@ body {
 	margin-top: 10px;
 }
 /* END NAVIGATION BAR */
+/*******************************
+***** BROWSER INFO *********
+*******************************/
+#browser{
+	font-size: 18px;
+}
