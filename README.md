@@ -5,7 +5,7 @@ _______________________________________
 Scripts needed to complete the project
 _______________________________________
 
-JustUs.html page needs: created date, last date updated, use the DOM/BOM objects to show the browser and display settings.
+DONE >>>JustUs.html page needs: created date, last date updated, use the DOM/BOM objects to show the browser and display settings.<<< DONE
 
 registrationForm.html page needs: validate the email address, name input field validation, control structure - if # registrations = 2 then name input field = 2, validation will force 2 name inputs before exiting. timestamp.
 
