@@ -7,11 +7,16 @@ _______________________________________
 
 DONE >>>JustUs.html page needs: created date, last date updated, use the DOM/BOM objects to show the browser and display settings.<<< DONE
 
-registrationForm.html page needs: validate the email address, name input field validation, control structure - if # registrations = 2 then name input field = 2, validation will force 2 name inputs before exiting. timestamp.
+registrationForm.html page needs: 
+validate the email address
+name input field validation
+control structure - if # registrations = 2 then name input field = 2
+validation will force 2 name inputs before exiting. 
+DONE >>> timestamp.<<< DONE
 
 DONE >> gallery.html page needs: onclick event handler - when photo is clicked an exploded view of the photo displays. << DONE
 
-videos.html page needs: same as gallery.html
+DONE >>>> videos.html page needs: same as gallery.html <<<< DONE
 
 contact.html page needs: input validation 
 
