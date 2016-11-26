@@ -14,15 +14,40 @@
 /* END FORMAT FOR ALL PAGES */
 /* BODY STYLE */	
 body {
-	font-family: 'Overlock';
+	font-family: Overlock;
 	font-size: 22px;
 	}
 /* END FORMAT FOR ALL PAGES */
 
-/************************************
- *** FONT STYLE FOR THIS PAGE ***
- ************************************/
  body{
 	 	background-color: rgb(35,36,38);
 		color: rgb(256,256,256);
  }
+ #participants{
+	text-align: center;
+	font-weight: bold;
+	font-family: Overlock;
+}
+
+#numReg{
+	width: 300pxpx;
+	height: 50px;
+	font-size: 22px;
+	font-family: Overlock;
+}
+
+#submit{
+	width: 90px;
+	height: 50px;
+	font-size: 22px;
+	font-family: Overlock;
+	
+}
+
+#back{
+	width: 90px;
+	height: 50px;
+	font-size: 22px;
+	font-family: Overlock;
+	}
+
