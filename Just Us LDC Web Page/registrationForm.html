@@ -5,52 +5,75 @@
 	<title>Event Registration</title>
 	<meta charset="UTF-8" />
 	<script src="modernizr-1.5.js"></script>
+	<script>
+	var creditCard = getElementByName(paypal);
+	if creditCard==true;{
+	window.open("www.paypal.com");
+	}
+	</script>
 	<link href="stylesheets/regForm.css" rel="stylesheet" type="text/css" />
-	<!---- script link goes here ----->
 </head>
+
+<link href="stylesheets/new.css" rel="stylesheet" type="text/css" />
 <body>
 <center>
-<script>
-var today = new Date();
+<script>/* TODAY'S DATE*/
+var today = new Date().toLocaleString();
 document.write("Today is " + today);
 </script>
 
+</p><!-- FLYER -->
 <img src ="photos/2017event.jpg" border="5">
-<h1> A mirACLE At The Fairgrounds Registration Form</h1>
-<hr size="5">
-<table style="width: 60%">
-<form>
-<tr>
-<td><b>Group Name:&emsp;</b></td><td><input type="text" name="groupName"></td>
-</tr><tr></tr>
-<tr>
-<td><b>Number of Registrations:&emsp;</b></td><td><input type="number" name="qtyReg" min="1" max="20"></td>
-</tr><tr></tr>
-<tr>
-<td><b>Full Name:</b></td>
-<td><input type="text" id="firstName">&emsp;<input type="text" id="lastName"></td>
-</tr><tr><td></td><td>First&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Last</td></tr>
-<tr>
-<td><b>Email:&emsp;</td><td></b><input type="email" name="email"><br></td>
-</tr><tr></tr>
-<tr>
-<td><b>Phone:&emsp;</td><td></b><input type="tel" name="phone"></td>
-</tr><tr></tr>
-</form>
-</table>
+<h1> A mirACLE At The Fairgrounds</h1>
+<br>
+<h2> Registration Form</h2>
+<hr size="10">
+<!-- REGISTRATION FORM -->	
 <table>
-<form>
-<tr><hr>
-<td><b>Payment Method&emsp;</b>
-<input type="radio" name="paypal"><b>PayPal</b></td>
-<td><input type="radio" name="atDoor"><b>Pay At The Door</b></td>
-</tr>
-<td><p><input type="submit" id="submit"></p></td>
-<td>
-<p><button type="button" onclick="window.location='events.html';">Back</button></p></td>
-</tr>
-</form>
+<form action="demo_form.asp" method="get">
+<div id="participants">
+<b> Full Name:&emsp;&emsp;&emsp;</b><input type="text" name="FullName[]"></p>
+</div>
+</form>	
+<!-- MULTIPLE REGISTRATIONS SCRIPT -->
+<script>
+var counter = 1;
+var limit = 5;
+function addInput(divName){
+     if (counter == limit)  {
+          alert("Please fill out a new form for the remaining participants " );
+     }
+     else {
+          var newdiv = document.createElement('div');
+          newdiv.innerHTML = "Full Name # " + (counter + 1) +"&emsp;&emsp;" +
+		  "<input type='text' name='myInputs[]'></p>";
+          document.getElementById(divName).appendChild(newdiv);
+          counter++;
+     }
+}
+</script>    
+<!-- END SCRIPT -->
 </table>
+<form>
+<center>
+<input type="button" id="numReg" value="Register an additional person" onClick="addInput('participants');">
 </center>
+<p>
+<b>Group Name:</b>&emsp;&emsp;<input type="text" name="groupName">
+</p>
+<p>
+<b>Email:</b>&emsp;&emsp;&emsp;&emsp;&emsp;<input type="email" name="email" required>
+</p>
+<b>Phone:&emsp;&emsp;&emsp;&emsp;&emsp;<input type="tel" name="phone" required>
+<hr>
+<b>Payment Method&emsp;</b>
+<input type="radio" name="paypal"><b>PayPal</b>
+<input type="radio" id="atDoor"><b>Pay At The Door</b>
+<p><input type="submit" id="submit" onclick="paymentType();">
+<!-- if paypal selected - on submit www.paypal.com should popup to complete the registration -->
+
+<button type="button" id="back" onclick="window.location='events.html';">
+Back</button></p>
+</form>
 </body>
 </html>
