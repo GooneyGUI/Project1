@@ -1,4 +1,4 @@
-<!--- THIS IS THE REGISTRATION FORM --->
+<!-- THIS IS THE REGISTRATION FORM -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,6 +38,7 @@ document.write("Today is " + today);
 <script>
 var counter = 1;
 var limit = 5;
+var price = 5.00;
 function addInput(divName){
      if (counter == limit)  {
           alert("Please fill out a new form for the remaining participants " );
@@ -49,13 +50,25 @@ function addInput(divName){
           document.getElementById(divName).appendChild(newdiv);
           counter++;
      }
+
 }
+function cost(divName) {
+	var totalCost = price * counter;
+    var newdiv = document.createElement('div');
+	newdiv.innerHTML = "Total cost: $" + totalCost;
+	document.getElementById(divName).appendChild(newdiv);	
+}
+
 </script>    
+<!-- END SCRIPT -->
+<!-- TOTAL COST SCRIPT -->
+
 <!-- END SCRIPT -->
 </table>
 <form>
 <center>
 <input type="button" id="numReg" value="Register an additional person" onClick="addInput('participants');">
+<input type="button" id="numPar" value="Done adding additional people" onClick="cost('participants');">
 </center>
 <p>
 <b>Group Name:</b>&emsp;&emsp;<input type="text" name="groupName">

@@ -36,6 +36,13 @@ body {
 	font-family: Overlock;
 }
 
+#numPar{
+	width: 300pxpx;
+	height: 50px;
+	font-size: 22px;
+	font-family: Overlock;
+}
+
 #submit{
 	width: 90px;
 	height: 50px;
