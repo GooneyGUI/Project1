@@ -42,6 +42,7 @@ var price = 50.00;
 var today = new Date().toLocaleString();
 var earlyBird = new Date(0,31,2017).toLocaleString();
 var ebprice = 35.00;
+var fname = document.getElementById("fname1");
 function addInput(divName){
      if (counter == limit)  {
           alert("Please fill out a new form for the remaining participants " );
@@ -70,15 +71,16 @@ function paymentType() {
 		window.open("http://www.paypal.com");
 	}
 }
-// function checkFname() {
-// 	fullNamePattern = /^[a-z]([-']?[a-z]+)*( [a-z]([-']?[a-z]+)*)+$/;
-// 	var fname1 = document.getElementByName("FullName[]");
-// 	if (fullNamePattern.test(!fname1.value)) {
-// 		alert("You did not enter a full name!\nPlease enter one now.");
-// 		fname1.focus();
-// 		return false;
-// 	}
-// }
+function checkName() {
+	if (fname.value == "") {
+		alert("You did not enter a name.\nPlease enter one now.");
+		fname.focus();
+		return false;
+	} else {
+		cost('participants');
+		return true;
+	}
+}
 </script>    
 <!-- END SCRIPT -->
 
@@ -86,7 +88,7 @@ function paymentType() {
 <form>
 <center>
 <input type="button" id="numReg" value="Register an additional person" onClick="addInput('participants');">
-<input type="button" id="numPar" value="Done adding additional people" onClick="cost('participants'); checkFname();">
+<input type="button" id="numPar" value="Done adding additional people" onClick="checkName();">
 </center>
 <p>
 <b>Group Name:</b>&emsp;&emsp;<input type="text" name="groupName">
