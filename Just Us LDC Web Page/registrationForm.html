@@ -5,12 +5,12 @@
 	<title>Event Registration</title>
 	<meta charset="UTF-8" />
 	<script src="modernizr-1.5.js"></script>
-	<script>
-	var creditCard = getElementByName(paypal);
+	<!--<script>
+	var creditCard = getElementById(paypal);
 	if creditCard==true;{
 	window.open("www.paypal.com");
 	}
-	</script>
+	</script>-->
 	<link href="stylesheets/regForm.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -31,14 +31,17 @@ document.write("Today is " + today);
 <table>
 <form action="demo_form.asp" method="get">
 <div id="participants">
-<b> Full Name:&emsp;&emsp;&emsp;</b><input type="text" name="FullName[]"></p>
+<b> Full Name:&emsp;&emsp;&emsp;</b><input type="text" name="FullName[]" id = "fname1"></p>
 </div>
 </form>	
 <!-- MULTIPLE REGISTRATIONS SCRIPT -->
 <script>
 var counter = 1;
 var limit = 5;
-var price = 5.00;
+var price = 50.00;
+var today = new Date().toLocaleString();
+var earlyBird = new Date(0,31,2017).toLocaleString();
+var ebprice = 35.00;
 function addInput(divName){
      if (counter == limit)  {
           alert("Please fill out a new form for the remaining participants " );
@@ -53,22 +56,37 @@ function addInput(divName){
 
 }
 function cost(divName) {
-	var totalCost = price * counter;
+	if (today < earlyBird) {
+		var totalCost = ebprice * counter;
+	} else {
+		var totalCost = price * counter;
+	}
     var newdiv = document.createElement('div');
 	newdiv.innerHTML = "Total cost: $" + totalCost;
 	document.getElementById(divName).appendChild(newdiv);	
 }
-
+function paymentType() {
+	if (document.getElementById("paypal").checked == true) {
+		window.open("http://www.paypal.com");
+	}
+}
+// function checkFname() {
+// 	fullNamePattern = /^[a-z]([-']?[a-z]+)*( [a-z]([-']?[a-z]+)*)+$/;
+// 	var fname1 = document.getElementByName("FullName[]");
+// 	if (fullNamePattern.test(!fname1.value)) {
+// 		alert("You did not enter a full name!\nPlease enter one now.");
+// 		fname1.focus();
+// 		return false;
+// 	}
+// }
 </script>    
 <!-- END SCRIPT -->
-<!-- TOTAL COST SCRIPT -->
 
-<!-- END SCRIPT -->
 </table>
 <form>
 <center>
 <input type="button" id="numReg" value="Register an additional person" onClick="addInput('participants');">
-<input type="button" id="numPar" value="Done adding additional people" onClick="cost('participants');">
+<input type="button" id="numPar" value="Done adding additional people" onClick="cost('participants'); checkFname();">
 </center>
 <p>
 <b>Group Name:</b>&emsp;&emsp;<input type="text" name="groupName">
@@ -79,8 +97,8 @@ function cost(divName) {
 <b>Phone:&emsp;&emsp;&emsp;&emsp;&emsp;<input type="tel" name="phone" required>
 <hr>
 <b>Payment Method&emsp;</b>
-<input type="radio" name="paypal"><b>PayPal</b>
-<input type="radio" id="atDoor"><b>Pay At The Door</b>
+<input type="radio" name="payment" id="paypal"><b>PayPal</b>
+<input type="radio" name="payment" id="atDoor"><b>Pay At The Door</b>
 <p><input type="submit" id="submit" onclick="paymentType();">
 <!-- if paypal selected - on submit www.paypal.com should popup to complete the registration -->
 
