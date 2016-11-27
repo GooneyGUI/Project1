@@ -36,13 +36,15 @@ document.write("Today is " + today);
 </form>	
 <!-- MULTIPLE REGISTRATIONS SCRIPT -->
 <script>
+// Initialize variables for use within the cost() function
 var counter = 1;
 var limit = 5;
 var price = 50.00;
 var today = new Date().toLocaleString();
 var earlyBird = new Date(0,31,2017).toLocaleString();
 var ebprice = 35.00;
-var fname = document.getElementById("fname1");
+
+// Function for the multiple person registration fields
 function addInput(divName){
      if (counter == limit)  {
           alert("Please fill out a new form for the remaining participants " );
@@ -56,6 +58,8 @@ function addInput(divName){
      }
 
 }
+
+// Function to display the total cost of the order
 function cost(divName) {
 	if (today < earlyBird) {
 		var totalCost = ebprice * counter;
@@ -66,11 +70,22 @@ function cost(divName) {
 	newdiv.innerHTML = "Total cost: $" + totalCost;
 	document.getElementById(divName).appendChild(newdiv);	
 }
+
+// Function to validate that an option was chosen and to send you to the paypal website
 function paymentType() {
 	if (document.getElementById("paypal").checked == true) {
 		window.open("http://www.paypal.com");
 	}
+	if ((document.getElementById("paypal").checked == false) && (document.getElementById("atDoor").checked == false)) {
+		alert("You did not choose a payment option.\nPlease select one now.");
+		return false;
+	}
 }
+
+// Initialization of the variable used for the full name validation
+var fname = document.getElementById("fname1");
+
+// Function to validate that something was input into the Full Name Field
 function checkName() {
 	if (fname.value == "") {
 		alert("You did not enter a name.\nPlease enter one now.");
@@ -81,6 +96,19 @@ function checkName() {
 		return true;
 	}
 }
+
+// Function to validate the phone number
+function checkPhone() {
+	var phnNum = document.getElementById("phone");
+	var patt = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/;
+	if (patt.test(phnNum.value)) {
+		return true;
+	} else {
+		alert("You entered an invalid phone number.\nPlease re-enter in a valid format.");
+		phnNum.focus();
+		return false;
+	}
+}
 </script>    
 <!-- END SCRIPT -->
 
@@ -88,7 +116,7 @@ function checkName() {
 <form>
 <center>
 <input type="button" id="numReg" value="Register an additional person" onClick="addInput('participants');">
-<input type="button" id="numPar" value="Done adding additional people" onClick="checkName();">
+<input type="button" id="numPar" value="Check Cost" onClick="checkName();">
 </center>
 <p>
 <b>Group Name:</b>&emsp;&emsp;<input type="text" name="groupName">
@@ -96,7 +124,7 @@ function checkName() {
 <p>
 <b>Email:</b>&emsp;&emsp;&emsp;&emsp;&emsp;<input type="email" name="email" required>
 </p>
-<b>Phone:&emsp;&emsp;&emsp;&emsp;&emsp;<input type="tel" name="phone" required>
+<b>Phone:&emsp;&emsp;&emsp;&emsp;&emsp;<input type="tel" name="phone" id="phone" required onchange="checkPhone();">
 <hr>
 <b>Payment Method&emsp;</b>
 <input type="radio" name="payment" id="paypal"><b>PayPal</b>
