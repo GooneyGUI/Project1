@@ -43,6 +43,9 @@ var price = 50.00;
 var today = new Date().toLocaleString();
 var earlyBird = new Date(0,31,2017).toLocaleString();
 var ebprice = 35.00;
+var shirt = 1;
+var shirtCost = 0.0;
+var shirtPrice = 5.00;
 
 // Function for the multiple person registration fields
 function addInput(divName){
@@ -50,11 +53,13 @@ function addInput(divName){
           alert("Please fill out a new form for the remaining participants " );
      }
      else {
+          shirt++;
           var newdiv = document.createElement('div');
           newdiv.innerHTML = "Full Name # " + (counter + 1) +"&emsp;&emsp;" +
 		  "<input type='text' name='myInputs[]'></p>";
           document.getElementById(divName).appendChild(newdiv);
           counter++;
+          
      }
 
 }
@@ -62,12 +67,18 @@ function addInput(divName){
 // Function to display the total cost of the order
 function cost(divName) {
 	if (today < earlyBird) {
-		var totalCost = ebprice * counter;
+		var regCost = ebprice * counter;
 	} else {
-		var totalCost = price * counter;
+		var regCost = price * counter;
+	}
+	for (var index = 0; index < shirt; index++) {
+		var newdiv = document.createElement('div');
+		shirtCost = shirtPrice*(index+1);
+		newdiv.innerHTML = "Cost of " + (index+1) + " shirt(s): $" + shirtCost;
+		document.getElementById(divName).appendChild(newdiv);
 	}
     var newdiv = document.createElement('div');
-	newdiv.innerHTML = "Total cost: $" + totalCost;
+	newdiv.innerHTML = "Registration cost: $" + regCost + "<br><br>Total Cost (with " + shirt + " shirt(s)): $" + (regCost+shirtCost);
 	document.getElementById(divName).appendChild(newdiv);	
 }
 
