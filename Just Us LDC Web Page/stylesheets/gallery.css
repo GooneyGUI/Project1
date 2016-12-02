@@ -1,34 +1,42 @@
-/* STYLESHEET FOR THE GALLERY PAGE*/
-
+/* GALLERY PAGE PROPERTIES*/
+	
 /***********************************
  ****	FORMAT FOR ALL PAGES ****
  ***********************************/
 
  /*FONT SELECTION*/
-@font-face 
-{
+@font-face {
 	font-family: Overlock;
 	src:url(fonts/Overlock.ttf);
 	}
-
-/* END FORMAT FOR ALL PAGES */
-
-
-/* BODY STYLE*/
+	
+/* BODY STYLE */	
 body {
-	font-family: overlock;
+	font-family: 'Overlock';
 	background-color: rgb(178,255,102);
-	font-size: 24px;
-	text-align: center;
+	font-size: 32px;
 	}
+
+h1{
+	margin-top: 10px;
 		
-/* IMAGE HOVER - replace with an onclick enlarge in javascript*/
-.thumbnail:hover{
-	position:relative;
-	top:-25px;
-	left:-35px;
-	width:300px;
-	height:auto;
+	}
+
+/************************************
+**  GALLERY IMAGE PROPERTIES  **
+************************************/
+.gallery{
 	display: block;
-	z-index:999;
+	margin: auto;
+	border-radius: 30px;
+	box-shadow: 10px 10px 5px #354228;
 }
+
+/***********************************
+ ****		NAVIGATION BAR 		  ****
+ ***********************************/
+#links{
+	text-align: center;
+	margin-top: 30px;
+	width: 100%;
+	}
