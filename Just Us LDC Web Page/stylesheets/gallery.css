@@ -1,4 +1,4 @@
-/* GALLERY PAGE PROPERTIES*/
+* GALLERY PAGE PROPERTIES*/
 	
 /***********************************
  ****	FORMAT FOR ALL PAGES ****
@@ -19,7 +19,6 @@ body {
 
 h1{
 	margin-top: 10px;
-		
 	}
 
 /************************************
@@ -29,7 +28,9 @@ h1{
 	display: block;
 	margin: auto;
 	border-radius: 30px;
-	box-shadow: 10px 10px 5px #354228;
+	box-shadow: 10px 5px 25px 10px #0d2d05;
+	border: 20px solid #161615;
+	
 }
 
 /***********************************
@@ -40,3 +41,4 @@ h1{
 	margin-top: 30px;
 	width: 100%;
 	}
+
