@@ -18,6 +18,12 @@ body {
 	font-size: 22px;
 	}
 /* END FORMAT FOR ALL PAGES */
+/**********************************
+****  FLYER PROPERTIES  ****
+**********************************/
+.flyer{
+	border-radius: 20px;
+}
 
  body{
 	 	background-color: rgb(35,36,38);
