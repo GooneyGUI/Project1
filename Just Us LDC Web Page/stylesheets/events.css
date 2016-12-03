@@ -19,7 +19,12 @@ body {
 	}
 /* END FORMAT FOR ALL PAGES */
 
-
+/**********************************
+****  IMAGE PROPERTIES  ****
+**********************************/
+.flyer{
+	border-radius: 20px;
+}
 
 /**********************************
  ****		NAVIGATION BAR 		   ****
