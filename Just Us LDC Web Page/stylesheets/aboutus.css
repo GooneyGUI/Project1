@@ -38,4 +38,22 @@ header{
 	margin-bottom: 5px;
 	margin-top: 50px;
 	}
+	
+/***************************
+ ****	LINK PROPERTIES ****
+ **************************/
 
+/* visited link */
+a:visited {
+    color: green;
+}
+
+/* mouse over link */
+a:hover {
+    color: #634d7a;
+}
+
+/* selected link */
+a:active {
+    color: #2a381f;
+}
